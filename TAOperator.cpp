@@ -2,9 +2,12 @@
 
 
 
+void TAOperator::evaluate()
+{
+}
+
 TAOperator::TAOperator()
 {
-
 }
 
 

@@ -5,8 +5,11 @@
 class TAOperator :
 	public TA
 {
+
 public:
+	bool hasUserDefinedName;
 	TA *first_operator;
+	virtual void evaluate();
 	TAOperator();
 	~TAOperator();
 };

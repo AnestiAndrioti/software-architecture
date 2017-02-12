@@ -10,6 +10,7 @@ TAType::TAType()
 TAType::~TAType()
 {
 	delete &name;
+	delete value;
 	delete this;
 }
 

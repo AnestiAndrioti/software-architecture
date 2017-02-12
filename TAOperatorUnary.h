@@ -6,5 +6,6 @@ class TAOperatorUnary :
 public:
 	TAOperatorUnary();
 	~TAOperatorUnary();
+	void list() override;
 };
 

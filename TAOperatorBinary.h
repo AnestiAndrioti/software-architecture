@@ -7,5 +7,6 @@ public:
 	TA *second_operator;
 	TAOperatorBinary();
 	~TAOperatorBinary();
+	void list() override;
 };
 

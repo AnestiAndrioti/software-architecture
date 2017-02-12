@@ -4,13 +4,9 @@ class TADouble :
 	public TAType
 {
 public:
-	TADouble();
 	TADouble(std::string input_name);
 	~TADouble();
 	std::string getType() override;
-
-private:
-	double value;
-
+	void set(double input_value);
 };
 

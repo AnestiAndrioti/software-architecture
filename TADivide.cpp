@@ -9,11 +9,14 @@ TADivide::TADivide(TA* input_first_operator, TA* input_second_operator)
 	}
 	first_operator = input_first_operator;
 	second_operator = input_second_operator;
+	setName("/");
+	hasUserDefinedName = false;
 }
 
 TADivide::TADivide(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TADivide(input_first_argument, input_second_argument)
 {
-	name = input_name;
+	setName(input_name);
+	hasUserDefinedName = true;
 }
 
 TADivide::~TADivide()
@@ -27,4 +30,26 @@ TADivide::~TADivide()
 std::string TADivide::getType()
 {
 	return typeid(first_operator).name();
+}
+
+void TADivide::evaluate()
+{
+	delete value;
+
+	if (first_operator->getType() == typeid(int).name())
+	{
+		TAInt *taLeftOjbect = (TAInt*)first_operator;
+		TAInt *taRightOjbect = (TAInt*)second_operator;
+		int answer = *(int*)taLeftOjbect->getValue() / *(int*)taRightOjbect->getValue();
+		value = new int(answer);
+	}
+	else
+	{
+		TADouble *taLeftOjbect = (TADouble*)first_operator;
+		TADouble *taRightOjbect = (TADouble*)second_operator;
+		double answer = *(double*)taLeftOjbect->getValue() / *(double*)taRightOjbect->getValue();
+		value = new double(answer);
+	}
+
+	isEvaluatedOrSet = true;
 }

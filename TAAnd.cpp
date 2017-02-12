@@ -8,11 +8,15 @@ TAAnd::TAAnd(TA* input_first_operator, TA* input_second_operator)
 	}
 	first_operator = input_first_operator;
 	second_operator = input_second_operator;
+	this->setName("&");
+	hasUserDefinedName = false;
 }
 
 TAAnd::TAAnd(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAAnd(input_first_argument, input_second_argument)
 {
-	name = input_name;
+	this->setName(input_name);
+	hasUserDefinedName = true;
+
 }
 
 TAAnd::~TAAnd()
@@ -27,3 +31,17 @@ std::string TAAnd::getType()
 {
 	return typeid(bool).name();
 }
+
+void TAAnd::evaluate()
+{
+		TABool *taLeftBoolOjbect = (TABool*)first_operator;
+		TABool *taRightBoolOjbect = (TABool*)second_operator;
+
+		bool answer = *(bool*)taLeftBoolOjbect->getValue() & *(bool*)taRightBoolOjbect->getValue();
+
+		delete value;
+		value = new bool(answer);
+
+		isEvaluatedOrSet = true;
+}
+

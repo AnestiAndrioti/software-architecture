@@ -10,11 +10,14 @@ TAOr::TAOr(TA* input_first_operator, TA* input_second_operator)
 	}
 	first_operator = input_first_operator;
 	second_operator = input_second_operator;
+	setName("|");
+	hasUserDefinedName = false;
 }
 
 TAOr::TAOr(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAOr(input_first_argument, input_second_argument)
 {
-	name = input_name;
+	setName(input_name);
+	hasUserDefinedName = true;
 }
 
 
@@ -22,6 +25,7 @@ TAOr::~TAOr()
 {
 	delete first_operator;
 	delete second_operator;
+	delete value;
 	delete &name;
 	delete this;
 }
@@ -29,4 +33,17 @@ TAOr::~TAOr()
 std::string TAOr::getType()
 {
 	return typeid(bool).name();
+}
+
+void TAOr::evaluate()
+{
+	TABool *taLeftBoolOjbect = (TABool*)first_operator;
+	TABool *taRightBoolOjbect = (TABool*)second_operator;
+
+	bool answer = *(bool*)taLeftBoolOjbect->getValue() | *(bool*)taRightBoolOjbect->getValue();
+
+	delete value;
+	value = new bool(answer);
+
+	isEvaluatedOrSet = true;
 }

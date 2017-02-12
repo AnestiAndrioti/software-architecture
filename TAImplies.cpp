@@ -10,11 +10,14 @@ TAImplies::TAImplies(TA* input_first_operator, TA* input_second_operator)
 	}
 	first_operator = input_first_operator;
 	second_operator = input_second_operator;
+	setName("implies");
+	hasUserDefinedName = false;
 }
 
 TAImplies::TAImplies(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAImplies(input_first_argument, input_second_argument)
 {
-	name = input_name;
+	setName(input_name);
+	hasUserDefinedName = true;
 }
 
 
@@ -23,10 +26,29 @@ TAImplies::~TAImplies()
 	delete first_operator;
 	delete second_operator;
 	delete &name;
+	delete value;
 	delete this;
 }
 
 std::string TAImplies::getType()
 {
 	return typeid(bool).name();
+}
+
+void TAImplies::evaluate()
+{
+	delete value;
+
+	bool answer;
+
+	TABool *taLeftBoolOjbect = (TABool*)first_operator;
+	TABool *taRightBoolOjbect = (TABool*)second_operator;
+	bool leftBool = *(bool*)taLeftBoolOjbect->getValue();
+	bool rightBool = *(bool*)taRightBoolOjbect->getValue();
+
+	answer = (leftBool && rightBool) || (!leftBool);
+
+	value = new bool(answer);
+
+	isEvaluatedOrSet = true;
 }
