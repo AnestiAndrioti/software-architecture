@@ -4,7 +4,7 @@ class TAOperatorBinary :
 	public TAOperator
 {
 public:
-	TA *second_operator;
+	TAData *second_operator;
 	TAOperatorBinary();
 	~TAOperatorBinary();
 	void list() override;

@@ -2,7 +2,7 @@
 
 
 
-TAMinusUnary::TAMinusUnary(TA* input_first_operator)
+TAMinusUnary::TAMinusUnary(TAData* input_first_operator)
 {
 	if (input_first_operator->getType() == typeid(bool).name())
 	{
@@ -13,7 +13,7 @@ TAMinusUnary::TAMinusUnary(TA* input_first_operator)
 	hasUserDefinedName = false;
 }
 
-TAMinusUnary::TAMinusUnary(TA* input_first_operator, std::string input_name) : TAMinusUnary(input_first_operator)
+TAMinusUnary::TAMinusUnary(TAData* input_first_operator, std::string input_name) : TAMinusUnary(input_first_operator)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

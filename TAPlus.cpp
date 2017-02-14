@@ -2,7 +2,7 @@
 
 
 
-TAPlus::TAPlus(TA* input_first_operator, TA* input_second_operator)
+TAPlus::TAPlus(TAData* input_first_operator, TAData* input_second_operator)
 {
 	if (input_first_operator->getType() == typeid(bool).name() || input_first_operator->getType() != input_second_operator->getType())
 	{
@@ -14,7 +14,7 @@ TAPlus::TAPlus(TA* input_first_operator, TA* input_second_operator)
 	hasUserDefinedName = false;
 }
 
-TAPlus::TAPlus(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAPlus(input_first_argument, input_second_argument)
+TAPlus::TAPlus(TAData* input_first_argument, TAData* input_second_argument, std::string input_name) : TAPlus(input_first_argument, input_second_argument)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

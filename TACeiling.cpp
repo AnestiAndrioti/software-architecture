@@ -1,6 +1,6 @@
 #include "TACeiling.h"
 
-TACeiling::TACeiling(TA* input_first_operator)
+TACeiling::TACeiling(TAData* input_first_operator)
 {
 	if (input_first_operator->getType() == typeid(bool).name())
 	{
@@ -13,7 +13,7 @@ TACeiling::TACeiling(TA* input_first_operator)
 
 }
 
-TACeiling::TACeiling(TA* input_first_operator, std::string input_name) : TACeiling(input_first_operator)
+TACeiling::TACeiling(TAData* input_first_operator, std::string input_name) : TACeiling(input_first_operator)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

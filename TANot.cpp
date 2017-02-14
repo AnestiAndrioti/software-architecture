@@ -2,7 +2,7 @@
 
 
 
-TANot::TANot(TA* input_first_operator)
+TANot::TANot(TAData* input_first_operator)
 {
 	if (input_first_operator->getType() != typeid(bool).name())
 	{
@@ -13,7 +13,7 @@ TANot::TANot(TA* input_first_operator)
 	hasUserDefinedName = false;
 }
 
-TANot::TANot(TA* input_first_operator, std::string input_name) : TANot(input_first_operator)
+TANot::TANot(TAData* input_first_operator, std::string input_name) : TANot(input_first_operator)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

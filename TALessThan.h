@@ -6,8 +6,8 @@ class TALessThan :
 	public TAOperatorBinary
 {
 public:
-	TALessThan(TA* input_first_argument, TA* input_second_argument);
-	TALessThan(TA* input_first_argument, TA* input_second_argument, std::string input_name);
+	TALessThan(TAData* input_first_argument, TAData* input_second_argument);
+	TALessThan(TAData* input_first_argument, TAData* input_second_argument, std::string input_name);
 	~TALessThan();
 	std::string getType() override;
 	void evaluate() override;

@@ -1,8 +1,8 @@
 #pragma once
-#include "TA.h"
+#include "TAData.h"
 
 //template<class T>
-class TAType : public TA
+class TAType : public TAData
 {
 public:
 

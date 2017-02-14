@@ -2,7 +2,7 @@
 
 
 
-TAOr::TAOr(TA* input_first_operator, TA* input_second_operator)
+TAOr::TAOr(TAData* input_first_operator, TAData* input_second_operator)
 {
 	if (input_first_operator->getType() != typeid(bool).name() || input_second_operator->getType() != typeid(bool).name())
 	{
@@ -14,7 +14,7 @@ TAOr::TAOr(TA* input_first_operator, TA* input_second_operator)
 	hasUserDefinedName = false;
 }
 
-TAOr::TAOr(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAOr(input_first_argument, input_second_argument)
+TAOr::TAOr(TAData* input_first_argument, TAData* input_second_argument, std::string input_name) : TAOr(input_first_argument, input_second_argument)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

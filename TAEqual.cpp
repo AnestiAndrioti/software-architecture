@@ -3,7 +3,7 @@
 
 
 
-TAEqual::TAEqual(TA* input_first_operator, TA* input_second_operator)
+TAEqual::TAEqual(TAData* input_first_operator, TAData* input_second_operator)
 {
 	if (input_first_operator->getType() != input_second_operator->getType())
 	{
@@ -15,7 +15,7 @@ TAEqual::TAEqual(TA* input_first_operator, TA* input_second_operator)
 	hasUserDefinedName = false;
 }
 
-TAEqual::TAEqual(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAEqual(input_first_argument, input_second_argument)
+TAEqual::TAEqual(TAData* input_first_argument, TAData* input_second_argument, std::string input_name) : TAEqual(input_first_argument, input_second_argument)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

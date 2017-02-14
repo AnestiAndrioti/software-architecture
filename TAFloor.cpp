@@ -4,7 +4,7 @@
 #include <cmath>
 
 
-TAFloor::TAFloor(TA* input_first_operator)
+TAFloor::TAFloor(TAData* input_first_operator)
 {
 	if (input_first_operator->getType() == typeid(bool).name())
 	{
@@ -14,7 +14,7 @@ TAFloor::TAFloor(TA* input_first_operator)
 	hasUserDefinedName = false;
 }
 
-TAFloor::TAFloor(TA* input_first_operator, std::string input_name) : TAFloor(input_first_operator)
+TAFloor::TAFloor(TAData* input_first_operator, std::string input_name) : TAFloor(input_first_operator)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

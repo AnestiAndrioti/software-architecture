@@ -36,6 +36,7 @@ int main()
 	t1->evaluate();
 	t1->printState();
 
+
 	system("PAUSE");
 	return 0;
 }

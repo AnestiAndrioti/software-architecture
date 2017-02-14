@@ -6,8 +6,8 @@ class TAMinusBinary :
 	public TAOperatorBinary
 {
 public:
-	TAMinusBinary(TA* input_first_argument, TA* input_second_argument);
-	TAMinusBinary(TA* input_first_argument, TA* input_second_argument, std::string input_name);
+	TAMinusBinary(TAData* input_first_argument, TAData* input_second_argument);
+	TAMinusBinary(TAData* input_first_argument, TAData* input_second_argument, std::string input_name);
 	~TAMinusBinary();
 	std::string getType() override;
 	void evaluate() override;

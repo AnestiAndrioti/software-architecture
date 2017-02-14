@@ -7,8 +7,8 @@ class TAPlus :
 	public TAOperatorBinary
 {
 public:
-	TAPlus(TA* input_first_argument, TA* input_second_argument);
-	TAPlus(TA* input_first_argument, TA* input_second_argument, std::string input_name);
+	TAPlus(TAData* input_first_argument, TAData* input_second_argument);
+	TAPlus(TAData* input_first_argument, TAData* input_second_argument, std::string input_name);
 	~TAPlus();
 	std::string getType() override;
 	void evaluate() override;

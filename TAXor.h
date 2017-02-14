@@ -6,8 +6,8 @@ class TAXor :
 	public TAOperatorBinary
 {
 public:
-	TAXor(TA* input_first_argument, TA* input_second_argument);
-	TAXor(TA* input_first_argument, TA* input_second_argument, std::string input_name);
+	TAXor(TAData* input_first_argument, TAData* input_second_argument);
+	TAXor(TAData* input_first_argument, TAData* input_second_argument, std::string input_name);
 	~TAXor();
 	std::string getType() override;
 	void evaluate();

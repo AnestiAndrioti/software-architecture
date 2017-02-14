@@ -1,6 +1,6 @@
 #include "TAMinusBinary.h"
 
-TAMinusBinary::TAMinusBinary(TA* input_first_operator, TA* input_second_operator)
+TAMinusBinary::TAMinusBinary(TAData* input_first_operator, TAData* input_second_operator)
 {
 	if (input_first_operator->getType() == typeid(bool).name() || input_first_operator->getType() != input_second_operator->getType())
 	{
@@ -12,7 +12,7 @@ TAMinusBinary::TAMinusBinary(TA* input_first_operator, TA* input_second_operator
 	hasUserDefinedName = false;
 }
 
-TAMinusBinary::TAMinusBinary(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAMinusBinary(input_first_argument, input_second_argument)
+TAMinusBinary::TAMinusBinary(TAData* input_first_argument, TAData* input_second_argument, std::string input_name) : TAMinusBinary(input_first_argument, input_second_argument)
 {
 	setName(input_name);
 	hasUserDefinedName = true;

@@ -1,14 +1,14 @@
 #pragma once
-#include "TA.h"
+#include "TAData.h"
 
 //template<typename T>
 class TAOperator :
-	public TA
+	public TAData
 {
 
 public:
 	bool hasUserDefinedName;
-	TA *first_operator;
+	TAData *first_operator;
 	virtual void evaluate();
 	TAOperator();
 	~TAOperator();

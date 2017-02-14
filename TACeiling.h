@@ -7,8 +7,8 @@ class TACeiling :
 	public TAOperatorUnary
 {
 public:
-	TACeiling(TA* input_first_operator);
-	TACeiling(TA* input_first_operator, std::string input_name);
+	TACeiling(TAData* input_first_operator);
+	TACeiling(TAData* input_first_operator, std::string input_name);
 	~TACeiling();
 	std::string getType() override;
 	void evaluate() override;

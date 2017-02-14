@@ -1,25 +1,22 @@
 #pragma once
 
-#include <string>
-#include <iostream>
+#include "TAObject.h"
 
 //template<class T>
-class TA
+class TAData :
+	public TAObject
 {
 
 protected:
-	std::string name;
 	void* value;
 	bool isEvaluatedOrSet;
 
 public :
-	TA();
-	~TA();
+	TAData();
+	~TAData();
 	virtual std::string getType();
 	virtual void list();
 	virtual void printState();
-	std::string getName();
-	void setName(std::string name);
 	void* getValue();
 };
 

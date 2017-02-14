@@ -1,44 +1,36 @@
-#include "TA.h"
+#include "TAData.h"
 
 
 
-TA::TA()
+TAData::TAData()
 {
 	isEvaluatedOrSet = false;
 }
 
 
-TA::~TA()
+TAData::~TAData()
 {
 	delete &name;
 	delete this;
 	delete value;
 }
 
-std::string TA::getType()
+std::string TAData::getType()
 {
 	return std::string();
 }
 
-void TA::list()
+void TAData::list()
 {
 	std::cout << getName();
 }
 
-std::string TA::getName()
-{
-	return name;
-}
-void TA::setName(std::string input_name)
-{
-	name = input_name;
-}
-void* TA::getValue()
+void* TAData::getValue()
 {
 	return value;
 }
 
-void TA::printState()
+void TAData::printState()
 {
 	if (isEvaluatedOrSet)
 	{

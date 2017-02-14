@@ -1,6 +1,6 @@
 #include "TAAnd.h"
 
-TAAnd::TAAnd(TA* input_first_operator, TA* input_second_operator)
+TAAnd::TAAnd(TAData* input_first_operator, TAData* input_second_operator)
 {
 	if (input_first_operator->getType() != typeid(bool).name() || input_second_operator->getType() != typeid(bool).name())
 	{
@@ -12,7 +12,7 @@ TAAnd::TAAnd(TA* input_first_operator, TA* input_second_operator)
 	hasUserDefinedName = false;
 }
 
-TAAnd::TAAnd(TA* input_first_argument, TA* input_second_argument, std::string input_name) : TAAnd(input_first_argument, input_second_argument)
+TAAnd::TAAnd(TAData* input_first_argument, TAData* input_second_argument, std::string input_name) : TAAnd(input_first_argument, input_second_argument)
 {
 	this->setName(input_name);
 	hasUserDefinedName = true;
