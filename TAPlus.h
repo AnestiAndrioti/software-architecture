@@ -2,6 +2,7 @@
 #include "TAOperatorBinary.h"
 #include "TAInt.h"
 #include"TADouble.h"
+#include "TAConstant.h"
 
 class TAPlus :
 	public TAOperatorBinary

@@ -8,8 +8,9 @@ TAPlus::TAPlus(TAData* input_first_operator, TAData* input_second_operator)
 	{
 		throw std::invalid_argument("Invalid Arguments.");
 	}
-	first_operator = input_first_operator;
+	first_operator = input_first_operator;	
 	second_operator = input_second_operator;
+
 	setName("+");
 	hasUserDefinedName = false;
 }
@@ -52,5 +53,6 @@ void TAPlus::evaluate()
 		value = new double(answer);
 	}
 
+	//std::cout << *(int *)(first_operator->getValue()) << " + " << *(int *)(second_operator->getValue()) << " = " << *(int *)(value) << std::endl;
 	isEvaluatedOrSet = true;
 }

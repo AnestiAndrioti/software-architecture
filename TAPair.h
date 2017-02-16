@@ -1,16 +1,20 @@
 #pragma once
-#include "TAData.h"
+#include "TAObject.h"
 class TAPair :
 	public TAObject
 {
 private:
-	TAData* first_argument;
-	TAData* second_argument;
+	TAObject* first_argument;
+	TAObject* second_argument;
+	TAPair();
+
 public:
-	TAPair(TAData* input_first_argument, TAData* input_second_argument);
-	TAPair(TAData* input_first_argument, TAData* input_second_argument, std::string input_name);
+	TAPair(TAObject* input_first_argument, TAObject* input_second_argument);
+	TAPair(TAObject* input_first_argument, TAObject* input_second_argument, std::string input_name);
 	~TAPair();
-	TAData* first();
-	TAData* next();
+	TAObject* first();
+	TAObject* next();
+	std::string type() override;
+	TAObject * createArray(int size) override;
 };
 

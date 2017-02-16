@@ -46,3 +46,4 @@ void TAData::printState()
 	else
 		std::cout << "Value still not evaluated for variable " << getName() << std::endl;
 }
+

@@ -1,0 +1,25 @@
+1. Provide a vision statement on how your design and implementation consider
+possible extensions and uses of your designed system.
+
+1: The function are divided between, TAPrimtive types such as int bool double, TAOperators that are subdivided into unary operator and binary operators.
+A new class should fall between those categories, for instance, let's say we add a TAModulo class, it will go under the binary operators.
+So it will benefit by a lot of methods and parameters by simple inheritance.
+The use of void * made the code flexible for adding more classes.
+
+
+2. Summarize the principle design decisions that you made
+
+2: As i said before, the architecture is divided between TAPrimtive types such as int bool double, TAOperators that are subdivided into unary operator and binary operators.
+Everythings derives from TAObject which has the name parameter for instance since everything needs a name.
+Then we have TAData that is used to specify that the class has a "value" member. For example TAInt derives from TAData but TAPair does not have any values, it has members that itself have values.
+Some class are forced to set the name of for each object, this is done by only making constructors with name parameters available.
+
+
+3. Summarize the working design decisions that you made.
+
+3: For TAArrayEvery, every time i create an object, i insert into a hash table the type of the object as string in the key part, and a pointer to the object itself in the value part.
+For every class, I have a create Array function that create an array of the specific type.
+That way, when I want to create an array, I get the typename of the object using typeid(object).name() and then I go into the hashtable and get a pointer to the object. 
+I then use this object to create an array of this specific type. 
+The Hashtable is made unique by making sure that the class is instantiated only once. We set the only constructor to be private. By doing so, only the class itself can instantiate an object.
+So we can have no more than one object. The getter function of the pointer of the object is made public so that other can access the hash table.

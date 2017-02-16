@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include "Header.h"
+#include "TATypeFactory.h"
+
 
 class TAObject
 {
@@ -11,7 +12,10 @@ protected:
 public:
 	TAObject();
 	~TAObject();
-	std::string getName();
+	const std::string getName();
 	void setName(std::string name);
+	TATypeFactory * taTypeFactory;
+	virtual TAObject* createArray(int size);
+	virtual std::string type();
 };
 

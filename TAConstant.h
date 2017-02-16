@@ -1,20 +1,20 @@
 #pragma once
 #include "TAType.h"
 class TAConstant :
-	public TAObject
+	public TAData
 {
 private:
-	const void* value;
+	std::string type;
 
 public:
-	TAConstant(int inpu_value);
-	TAConstant(double inpu_value);
-	TAConstant(bool inpu_value);
-	TAConstant(int inpu_value, std::string input_name);
-	TAConstant(double inpu_value, std::string input_name);
-	TAConstant(bool inpu_value, std::string input_name);
-	const void* getValue();
+	TAConstant(int input_value);
+	TAConstant(double input_value);
+	TAConstant(bool input_value);
+	TAConstant(int input_value, std::string input_name);
+	TAConstant(double input_value, std::string input_name);
+	TAConstant(bool input_value, std::string input_name);
 
 	~TAConstant();
+	std::string getType() override;
 };
 
