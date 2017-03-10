@@ -1,5 +1,26 @@
 #include "TAAnd.h"
 
+//template <typename T, typename = typename std::enable_if<std::is_base_of<TAData, T>::value && std::is_base_of<ReturnBoolInterface, T>::value>::type...>
+//TAAnd::TAAnd(T* input_first_operator, T* input_second_operator)
+//{
+//	if (input_first_operator->getType() != typeid(bool).name() || input_second_operator->getType() != typeid(bool).name())
+//	{
+//		throw std::invalid_argument("Arguments are not a boolean.");
+//	}
+//	first_operator = input_first_operator;
+//	second_operator = input_second_operator;
+//	this->setName("&");
+//	hasUserDefinedName = false;
+//}
+//
+//template <typename T, typename = typename std::enable_if<std::is_base_of<TAData, T>::value && std::is_base_of<ReturnBoolInterface, T>::value>::type...>
+//TAAnd::TAAnd(T* input_first_argument, T* input_second_argument, std::string input_name) : TAAnd(input_first_argument, input_second_argument)
+//{
+//	this->setName(input_name);
+//	hasUserDefinedName = true;
+//
+//}
+
 TAAnd::TAAnd(TAData* input_first_operator, TAData* input_second_operator)
 {
 	if (input_first_operator->getType() != typeid(bool).name() || input_second_operator->getType() != typeid(bool).name())
@@ -12,7 +33,7 @@ TAAnd::TAAnd(TAData* input_first_operator, TAData* input_second_operator)
 	hasUserDefinedName = false;
 }
 
-TAAnd::TAAnd(TAData* input_first_argument, TAData* input_second_argument, std::string input_name) : TAAnd(input_first_argument, input_second_argument)
+TAAnd::TAAnd(TAData* input_first_operator, TAData* input_second_operator, std::string input_name) : TAAnd(input_first_argument, input_second_argument)
 {
 	this->setName(input_name);
 	hasUserDefinedName = true;
@@ -45,3 +66,9 @@ void TAAnd::evaluate()
 		isEvaluatedOrSet = true;
 }
 
+template <typename T>
+typename std::enable_if<
+	std::is_base_of<TAData, T>::value && std::is_base_of<ReturnBoolInterface, T>::value
+>::type foo(T* t) {
+
+}

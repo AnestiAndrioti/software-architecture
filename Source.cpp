@@ -13,9 +13,19 @@
 #include "TAArrayAccess.h"
 #include "TAPair.h"
 #include "TAPlus.h"
+#include "TAXor.h"
+#include "ReturnBoolInterface.h"
+
+using namespace std;
+
+template <typename T, typename = typename std::enable_if<std::is_base_of<TAAnd, T>::value && std::is_base_of<ReturnBoolInterface, T>::value>::type>
+void test(T* t) {
+	cout << 2 <<endl;
+}
 
 int main()
 {
+	/*
 	TAInt* x = new TAInt("x");
 	TADouble* d = new TADouble("d");
 	TACeiling* y = new TACeiling(d);
@@ -52,8 +62,16 @@ int main()
 
 	TAArrayAccess *ai = new TAArrayAccess(a, exp);
 	TAPair *p2 = new TAPair(ai, x);	i->set(1);	exp->evaluate();	//ai->set(7);  not working
+	*/
 
 
+
+
+	TABool* b1 = new TABool("b1");
+	TABool* b2 = new TABool("b2");
+	TAAnd* a = new TAAnd(b1,b2);
+	//TAXor* a = new TAXor(b1, b2);
+	test(a);
 	system("PAUSE");
 	return 0;
 }
