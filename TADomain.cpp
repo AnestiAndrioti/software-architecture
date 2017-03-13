@@ -7,7 +7,7 @@ TADomain::TADomain()
 	
 }
 
-void TADomain::add(TAConstant* object)
+void TADomain::add(TAType* object)
 {
 	values.push_back(object);
 }

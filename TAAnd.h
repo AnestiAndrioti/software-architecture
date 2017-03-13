@@ -4,7 +4,7 @@
 //#include "ReturnBoolInterface.h"
 
 class TAAnd :
-	public TAOperatorBinary, public ReturnBoolInterface
+	public TAOperatorBinary
 {
 public:
 	//template <typename T, typename = typename std::enable_if<std::is_base_of<TAData, T>::value && std::is_base_of<ReturnBoolInterface, T>::value>::type...>
