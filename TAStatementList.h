@@ -9,7 +9,7 @@ protected:
 	TAStatementAtomic* atomic_statement;
 	TAStatement* statement;
 public:
-	TAStatementList();
+	TAStatementList(TAStatementAtomic* input_atomic_statement, TAStatement* input_statement);
 	~TAStatementList();
 };
 

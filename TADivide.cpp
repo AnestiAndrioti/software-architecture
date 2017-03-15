@@ -38,16 +38,12 @@ void TADivide::evaluate()
 
 	if (first_operator->getType() == typeid(int).name())
 	{
-		TAInt *taLeftOjbect = (TAInt*)first_operator;
-		TAInt *taRightOjbect = (TAInt*)second_operator;
-		int answer = *(int*)taLeftOjbect->getValue() / *(int*)taRightOjbect->getValue();
+		int answer = *(int*)first_operator->getValue() / *(int*)second_operator->getValue();
 		value = new int(answer);
 	}
 	else
 	{
-		TADouble *taLeftOjbect = (TADouble*)first_operator;
-		TADouble *taRightOjbect = (TADouble*)second_operator;
-		double answer = *(double*)taLeftOjbect->getValue() / *(double*)taRightOjbect->getValue();
+		double answer = *(double*)first_operator->getValue() / *(double*)second_operator->getValue();
 		value = new double(answer);
 	}
 

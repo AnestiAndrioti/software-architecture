@@ -40,10 +40,16 @@ int main()
 	t1->evaluate();
 	t1->printState();
 
+	t2->evaluate();
+	t2->printState();
+
 	d->set(5.3);
 	y->evaluate();
 	t1->evaluate();
 	t1->printState();
+
+	t2->evaluate();
+	t2->printState();
 
 
 	TAConstant *N = new TAConstant(16);	TAConstant *one = new TAConstant(1);

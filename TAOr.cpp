@@ -37,10 +37,7 @@ std::string TAOr::getType()
 
 void TAOr::evaluate()
 {
-	TABool *taLeftBoolOjbect = (TABool*)first_operator;
-	TABool *taRightBoolOjbect = (TABool*)second_operator;
-
-	bool answer = *(bool*)taLeftBoolOjbect->getValue() | *(bool*)taRightBoolOjbect->getValue();
+	bool answer = *(bool*)first_operator->getValue() | *(bool*)second_operator->getValue();
 
 	delete value;
 	value = new bool(answer);

@@ -38,21 +38,16 @@ std::string TAEqual::getType()
 void TAEqual::evaluate()
 {
 	delete value;
+	bool answer;
 
 	if (first_operator->getType() == typeid(int).name())
 	{
-		TAInt *taLeftOjbect = (TAInt*)first_operator;
-		TAInt *taRightOjbect = (TAInt*)second_operator;
-		int answer = *(int*)taLeftOjbect->getValue() == *(int*)taRightOjbect->getValue();
-		value = new int(answer);
+		answer = *(int*)first_operator->getValue() == *(int*)second_operator->getValue();
 	}
 	else
 	{
-		TADouble *taLeftOjbect = (TADouble*)first_operator;
-		TADouble *taRightOjbect = (TADouble*)second_operator;
-		double answer = *(double*)taLeftOjbect->getValue() == *(double*)taRightOjbect->getValue();
-		value = new double(answer);
+		answer = *(double*)first_operator->getValue() == *(double*)second_operator->getValue();
 	}
-
+	value = new bool(answer);
 	isEvaluatedOrSet = true;
 }

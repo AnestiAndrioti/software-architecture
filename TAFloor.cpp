@@ -41,13 +41,11 @@ void TAFloor::evaluate()
 
 	if (first_operator->getType() == typeid(double).name())
 	{
-		TADouble* taLeftOjbect = (TADouble*)first_operator;
-		answer = floor(*(double*)taLeftOjbect->getValue());
+		answer = floor(*(double*)first_operator->getValue());
 	}
 	else if (first_operator->getType() == typeid(int).name())
 	{
-		TAInt* taLeftOjbect = (TAInt*)first_operator;
-		answer = floor(*(int*)taLeftOjbect->getValue());
+		answer = floor(*(int*)first_operator->getValue());
 	}
 
 	value = new int(answer);

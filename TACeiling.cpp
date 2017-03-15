@@ -40,14 +40,11 @@ void TACeiling::evaluate()
 	int answer;
 	if (first_operator->getType() == typeid(double).name())
 	{
-		TADouble* taLeftOjbect = (TADouble*)first_operator;
-
-		answer = ceil(*(double*)taLeftOjbect->getValue());
+		answer = ceil(*(double*)first_operator->getValue());
 	}
 	else if (first_operator->getType() == typeid(int).name())
 	{
-		TAInt* taLeftOjbect = (TAInt*)first_operator;
-		answer = ceil(*(int*)taLeftOjbect->getValue());
+		answer = ceil(*(int*)first_operator->getValue());
 	}
 
 	value = new int(answer);

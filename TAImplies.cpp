@@ -41,10 +41,8 @@ void TAImplies::evaluate()
 
 	bool answer;
 
-	TABool *taLeftBoolOjbect = (TABool*)first_operator;
-	TABool *taRightBoolOjbect = (TABool*)second_operator;
-	bool leftBool = *(bool*)taLeftBoolOjbect->getValue();
-	bool rightBool = *(bool*)taRightBoolOjbect->getValue();
+	bool leftBool = *(bool*)first_operator->getValue();
+	bool rightBool = *(bool*)second_operator->getValue();
 
 	answer = (leftBool && rightBool) || (!leftBool);
 

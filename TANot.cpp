@@ -36,9 +36,7 @@ std::string TANot::getType()
 
 void TANot::evaluate()
 {
-	TABool *taLeftBoolOjbect = (TABool*)first_operator;
-
-	bool answer = !(*(bool*)taLeftBoolOjbect->getValue());
+	bool answer = !(*(bool*)first_operator->getValue());
 
 	delete value;
 	value = new bool(answer);

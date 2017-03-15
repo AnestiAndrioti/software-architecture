@@ -44,15 +44,11 @@ void TAMoreThan::evaluate()
 
 	if (first_operator->getType() == typeid(int).name())
 	{
-		TAInt *taLeftBoolOjbect = (TAInt*)first_operator;
-		TAInt *taRightBoolOjbect = (TAInt*)second_operator;
-		answer = *(int*)taLeftBoolOjbect->getValue() > *(int*)taRightBoolOjbect->getValue();
+		answer = *(int*)first_operator->getValue() > *(int*)second_operator->getValue();
 	}
 	else
 	{
-		TADouble *taLeftBoolOjbect = (TADouble*)first_operator;
-		TADouble *taRightBoolOjbect = (TADouble*)second_operator;
-		answer = *(double*)taLeftBoolOjbect->getValue() > *(double*)taRightBoolOjbect->getValue();
+		answer = *(double*)first_operator->getValue() > *(double*)second_operator->getValue();
 	}
 	value = new bool(answer);
 	isEvaluatedOrSet = true;
