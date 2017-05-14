@@ -1,8 +1,11 @@
 #pragma once
 #include "TAOperatorBinary.h"
 #include "TABool.h"
+#include "TAFormula.h"
+
+
 class TAOr :
-	public TAOperatorBinary
+	public TAOperatorBinary, public TAFormula
 {
 public:
 	TAOr(TAData* input_first_argument, TAData* input_second_argument);

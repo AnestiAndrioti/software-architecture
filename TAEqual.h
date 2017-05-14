@@ -3,9 +3,10 @@
 #include "TABool.h"
 #include "TAInt.h"
 #include "TADouble.h"
+#include "TAFormula.h"
 
 class TAEqual :
-	public TAOperatorBinary
+	public TAOperatorBinary, public TAFormula
 {
 public:
 	TAEqual(TAData* input_first_argument, TAData* input_second_argument);

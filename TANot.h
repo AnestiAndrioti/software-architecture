@@ -1,9 +1,10 @@
 #pragma once
 #include "TAOperatorUnary.h"
 #include "TABool.h"
+#include "TAFormula.h"
 
 class TANot :
-	public TAOperatorUnary
+	public TAOperatorUnary, public TAFormula
 {
 public:
 	TANot(TAData* input_first_operator);

@@ -10,7 +10,7 @@ private:
 
 public:
 	TADomain();
-	void add(TAConstant *object);
+	void add(TAType *object);
 	std::vector<TAType *> getValues();
 	void list();
 	~TADomain();

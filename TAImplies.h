@@ -1,9 +1,10 @@
 #pragma once
 #include "TAOperatorBinary.h"
 #include "TABool.h"
+#include "TAFormula.h"
 
 class TAImplies :
-	public TAOperatorBinary
+	public TAOperatorBinary, public TAFormula
 {
 public:
 	TAImplies(TAData* input_first_argument, TAData* input_second_argument);

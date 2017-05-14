@@ -1,10 +1,10 @@
 #pragma once
 #include "TAOperatorBinary.h"
 #include "TABool.h"
-//#include "ReturnBoolInterface.h"
+#include "TAFormula.h"
 
 class TAAnd :
-	public TAOperatorBinary, public ReturnBoolInterface
+	public TAOperatorBinary, public TAFormula
 {
 public:
 	//template <typename T, typename = typename std::enable_if<std::is_base_of<TAData, T>::value && std::is_base_of<ReturnBoolInterface, T>::value>::type...>

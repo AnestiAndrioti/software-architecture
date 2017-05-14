@@ -33,7 +33,7 @@ TAAnd::TAAnd(TAData* input_first_operator, TAData* input_second_operator)
 	hasUserDefinedName = false;
 }
 
-TAAnd::TAAnd(TAData* input_first_operator, TAData* input_second_operator, std::string input_name) : TAAnd(input_first_argument, input_second_argument)
+TAAnd::TAAnd(TAData* input_first_operator, TAData* input_second_operator, std::string input_name) : TAAnd(input_first_operator, input_second_operator)
 {
 	this->setName(input_name);
 	hasUserDefinedName = true;

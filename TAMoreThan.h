@@ -2,8 +2,11 @@
 #include "TAOperatorBinary.h"
 #include "TAInt.h"
 #include "TADouble.h"
+#include "TAFormula.h"
+
+
 class TAMoreThan :
-	public TAOperatorBinary
+	public TAOperatorBinary, public TAFormula
 {
 public:
 	TAMoreThan(TAData* input_first_argument, TAData* input_second_argument);
