@@ -65,10 +65,3 @@ void TAAnd::evaluate()
 
 		isEvaluatedOrSet = true;
 }
-
-template <typename T>
-typename std::enable_if<
-	std::is_base_of<TAData, T>::value && std::is_base_of<ReturnBoolInterface, T>::value
->::type foo(T* t) {
-
-}

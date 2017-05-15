@@ -8,6 +8,7 @@ public:
 
 	TAType();
 	~TAType();
+	virtual void setValue(void * taOperator);
 //	T value;
 //	std::string getType() override;
 };

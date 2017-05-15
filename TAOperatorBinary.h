@@ -8,5 +8,6 @@ public:
 	TAOperatorBinary();
 	~TAOperatorBinary();
 	void list() override;
+
 };
 

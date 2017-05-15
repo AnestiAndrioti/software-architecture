@@ -14,3 +14,8 @@ TAType::~TAType()
 	delete this;
 }
 
+void TAType::setValue(void * taOperator)
+{
+	value = taOperator;
+}
+
