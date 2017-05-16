@@ -18,6 +18,8 @@ void TAQuantifiers::list()
 	std::cout << ", ";
 	exp->list();
 	std::cout << ")";
+	std::cout << std::endl;
+
 }
 
 bool TAQuantifiers::checkFreeVariable(TAType* fv, TAOperator * op)

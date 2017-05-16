@@ -35,6 +35,12 @@ public:
 
 	TATransition * getPortTransition(TAPort* port);
 
+	std::set<TAState*> getStates();
+	std::set<TAPort*> getPorts();
+	std::set<TATransition*> getTransitions();
+	std::set<TALabel*> getLabelTransitions();
+
+
 	bool addState(TAState* state);
 
 	bool addPort(TAPort* port);

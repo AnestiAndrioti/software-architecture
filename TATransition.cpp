@@ -51,7 +51,7 @@ void TATransition::list()
 	std::cout << ", transition label: ";
 	transitionLabel->list();
 	std::cout << "}";
-
+	std::cout << std::endl;
 }
 
 

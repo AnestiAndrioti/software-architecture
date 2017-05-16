@@ -72,6 +72,7 @@ void TAComponent::list()
 		std::cout << " ";
 	}
 	std::cout << "}";
+	std::cout << std::endl;
 }
 
 void TAComponent::printState()
@@ -127,6 +128,26 @@ TATransition * TAComponent::getPortTransition(TAPort* port)
 		}
 	}
 	return nullptr;
+}
+
+std::set<TAState*> TAComponent::getStates()
+{
+	return states;
+}
+
+std::set<TAPort*> TAComponent::getPorts()
+{
+	return ports;
+}
+
+std::set<TATransition*> TAComponent::getTransitions()
+{
+	return transitions;
+}
+
+std::set<TALabel*> TAComponent::getLabelTransitions()
+{
+	return transitionLabels;
 }
 
 bool TAComponent::addState(TAState* state)
