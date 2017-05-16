@@ -25,7 +25,6 @@ TACeiling::~TACeiling()
 {
 	delete first_operator;
 	delete &name;
-	delete this;
 }
 
 std::string TACeiling::getType()
@@ -42,12 +41,12 @@ void TACeiling::evaluate()
 	{
 		TADouble* taLeftOjbect = (TADouble*)first_operator;
 
-		answer = ceil(*(double*)taLeftOjbect->getValue());
+		answer = (int)ceil(*(double*)taLeftOjbect->getValue());
 	}
 	else if (first_operator->getType() == typeid(int).name())
 	{
 		TAInt* taLeftOjbect = (TAInt*)first_operator;
-		answer = ceil(*(int*)taLeftOjbect->getValue());
+		answer = (int)ceil(*(int*)taLeftOjbect->getValue());
 	}
 
 	value = new int(answer);

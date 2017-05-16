@@ -11,7 +11,6 @@ TAOperatorUnary::~TAOperatorUnary()
 {
 	delete &name;
 	delete value;
-	delete this;
 }
 
 void TAOperatorUnary::list()

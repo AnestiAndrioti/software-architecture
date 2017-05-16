@@ -7,7 +7,6 @@ TATransition::TATransition(TAState * from, TAState * to) : sourceState(from), de
 
 TATransition::~TATransition()
 {
-	delete this;
 }
 
 void TATransition::setSourceState(TAState * from)

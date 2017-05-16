@@ -29,7 +29,6 @@ TAMoreThan::~TAMoreThan()
 	delete second_operator;
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TAMoreThan::getType()

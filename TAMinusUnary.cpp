@@ -24,7 +24,6 @@ TAMinusUnary::~TAMinusUnary()
 	delete first_operator;
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TAMinusUnary::getType()

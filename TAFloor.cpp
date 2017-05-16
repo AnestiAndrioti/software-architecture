@@ -25,7 +25,6 @@ TAFloor::~TAFloor()
 {
 	delete first_operator;
 	delete &name;
-	delete this;
 }
 
 std::string TAFloor::getType()
@@ -42,12 +41,12 @@ void TAFloor::evaluate()
 	if (first_operator->getType() == typeid(double).name())
 	{
 		TADouble* taLeftOjbect = (TADouble*)first_operator;
-		answer = floor(*(double*)taLeftOjbect->getValue());
+		answer = (int)floor(*(double*)taLeftOjbect->getValue());
 	}
 	else if (first_operator->getType() == typeid(int).name())
 	{
 		TAInt* taLeftOjbect = (TAInt*)first_operator;
-		answer = floor(*(int*)taLeftOjbect->getValue());
+		answer = (int)floor(*(int*)taLeftOjbect->getValue());
 	}
 
 	value = new int(answer);

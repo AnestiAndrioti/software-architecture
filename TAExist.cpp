@@ -12,7 +12,7 @@ void TAExist::evaluate()
 	delete value;
 	value = new bool(false);
 
-	for (int i = 0; i < values.size(); i++)
+	for (unsigned int i = 0; i < values.size(); i++)
 	{
 		freeVariable = values[i];
 		exp->evaluate();

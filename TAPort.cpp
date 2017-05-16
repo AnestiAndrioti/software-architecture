@@ -7,7 +7,6 @@ TAPort::TAPort(int id, std::string name) : id(id), name(name)
 
 TAPort::~TAPort()
 {
-	delete this;
 }
 
 void TAPort::list()

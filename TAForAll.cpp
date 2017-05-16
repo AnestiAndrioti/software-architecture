@@ -14,7 +14,7 @@ void TAForAll::evaluate()
 	delete value;
 	value = new bool(true);
 
-	for (int i = 0; i < values.size(); i++)
+	for (unsigned int i = 0; i < values.size(); i++)
 	{
 		freeVariable = values[i];
 		exp->evaluate();

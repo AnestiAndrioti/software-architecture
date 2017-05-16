@@ -12,7 +12,6 @@ TAComponent::TAComponent(TAState * input_initialState, std::set<TAState*> input_
 
 TAComponent::~TAComponent()
 {
-	delete this;
 }
 
 void TAComponent::addTransitionLabel(TALabel * transitionLabel)
@@ -92,7 +91,7 @@ void TAComponent::printVariables()
 			variableNames.push_back(variable->getName());
 	}
 	std::cout << "Variable names: {";
-	for (int i = 0; i < variableNames.size() - 1; i++)
+	for (unsigned int i = 0; i < variableNames.size() - 1; i++)
 		std::cout << variableNames[i] << ", ";
 	std::cout << variableNames[variableNames.size() - 1] << "}";
 }
@@ -170,6 +169,13 @@ bool TAComponent::addPort(TAPort* port)
 		return true;
 	}
 	return false;
+}
+
+bool TAComponent::hasPort(TAPort * port)
+{
+	if (ports.find(port) == ports.end())
+		return false;
+	return true;
 }
 
 TAComponent TAComponent::operator=(const TAComponent & rhs)

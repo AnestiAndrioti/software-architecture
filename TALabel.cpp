@@ -6,13 +6,6 @@ TALabel::TALabel(TAPort * input_port, TAFormula * input_guard, TAStatement * inp
 }
 
 
-
-TALabel::~TALabel()
-{
-	delete this;
-}
-
-
 int TALabel::getPortId()
 {
 	return port->getId();

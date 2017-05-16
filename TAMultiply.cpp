@@ -25,7 +25,6 @@ TAMultiply::~TAMultiply()
 	delete second_operator;
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TAMultiply::getType()

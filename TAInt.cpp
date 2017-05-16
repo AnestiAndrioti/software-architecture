@@ -17,7 +17,6 @@ TAInt::~TAInt()
 {
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TAInt::getType()

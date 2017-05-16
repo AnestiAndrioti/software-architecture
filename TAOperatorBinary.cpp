@@ -10,7 +10,6 @@ TAOperatorBinary::TAOperatorBinary()
 TAOperatorBinary::~TAOperatorBinary()
 {
 	delete &name;
-	delete this;
 }
 
 void TAOperatorBinary::list()

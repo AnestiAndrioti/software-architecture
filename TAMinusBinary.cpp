@@ -25,7 +25,6 @@ TAMinusBinary::~TAMinusBinary()
 	delete second_operator;
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TAMinusBinary::getType()

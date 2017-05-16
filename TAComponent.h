@@ -44,6 +44,7 @@ public:
 	bool addState(TAState* state);
 
 	bool addPort(TAPort* port);
+	bool hasPort(TAPort* port);
 
 	TAComponent operator=(const TAComponent & rhs);
 

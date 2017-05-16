@@ -26,7 +26,6 @@ TAPlus::~TAPlus()
 	delete first_operator;
 	delete second_operator;
 	delete &name;
-	delete this;
 }
 
 std::string TAPlus::getType()

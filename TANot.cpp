@@ -26,7 +26,6 @@ TANot::~TANot()
 	delete first_operator;
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TANot::getType()

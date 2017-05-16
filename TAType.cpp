@@ -11,7 +11,6 @@ TAType::~TAType()
 {
 	delete &name;
 	delete value;
-	delete this;
 }
 
 void TAType::setValue(void * taOperator)

@@ -21,7 +21,7 @@ void TADomain::list()
 	if(values.size() > 0)
 	{
 		std::cout << "(";
-		for (int i = 0; i < values.size() - 1; i++)
+		for (unsigned int i = 0; i < values.size() - 1; i++)
 			std::cout << values[i] << ", ";
 		std::cout << values[values.size() - 1] << ")";
 	}

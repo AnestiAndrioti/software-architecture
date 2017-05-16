@@ -11,7 +11,6 @@ TAData::TAData()
 TAData::~TAData()
 {
 	delete &name;
-	delete this;
 	delete value;
 }
 

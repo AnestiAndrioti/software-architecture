@@ -19,7 +19,6 @@ TADouble::~TADouble()
 {
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TADouble::getType()

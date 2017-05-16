@@ -27,7 +27,6 @@ TAOr::~TAOr()
 	delete second_operator;
 	delete value;
 	delete &name;
-	delete this;
 }
 
 std::string TAOr::getType()

@@ -17,7 +17,6 @@ TABool::~TABool()
 {
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TABool::getType()

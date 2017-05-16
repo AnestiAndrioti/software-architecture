@@ -24,7 +24,6 @@ TALessThan::~TALessThan()
 	delete second_operator;
 	delete &name;
 	delete value;
-	delete this;
 }
 
 std::string TALessThan::getType()

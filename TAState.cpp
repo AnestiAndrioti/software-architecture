@@ -7,7 +7,6 @@ TAState::TAState(int id, std::string name) : id(id), name(name)
 
 TAState::~TAState()
 {
-	delete this;
 }
 
 void TAState::list()
