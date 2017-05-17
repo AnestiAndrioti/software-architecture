@@ -6,6 +6,10 @@ void TAStatement::evaluate()
 {
 }
 
+void TAStatement::printState()
+{
+}
+
 TAStatement::TAStatement()
 {
 }

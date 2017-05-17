@@ -13,5 +13,6 @@ public:
 	virtual void list() = 0;
 	virtual TAData * getFirstOperator() = 0;
 	virtual void* getValue() = 0;
+	virtual void printState() = 0;
 };
 

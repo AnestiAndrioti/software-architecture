@@ -11,4 +11,5 @@ public:
 	virtual void list();
 
 	virtual void evaluate();
+	virtual void printState();
 };

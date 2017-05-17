@@ -84,7 +84,7 @@ bool TAInteraction::isReadyToExecute()
 {
 	guard->evaluate();
 	if (!guard->getValue())
-		return false; 
+		return false;
 
 	for (TAComponent * component : components) {
 		for (TAPort * port : ports)
@@ -99,7 +99,7 @@ bool TAInteraction::isReadyToExecute()
 void TAInteraction::evaluate()
 {
 	action->evaluate();
-	for (TAComponent * component : components) 
+	for (TAComponent * component : components)
 	{
 		component->evaluate();
 	}

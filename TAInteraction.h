@@ -29,10 +29,9 @@ public:
 	void evaluate();
 
 private:
-	std::set<TAComponent *> components; 
+	std::set<TAComponent *> components;
 	std::set<TAPort *> ports;
 
 	TAFormula * guard;
 	TAStatement * action;
 };
-
